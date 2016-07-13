@@ -17,9 +17,7 @@ class PostRepository
     {
         return Post::whereId($id)
             ->get()
-            ->first(function () use ($default) {
-                return true;
-            }, new Post([
+            ->first(null, new Post([
                     'title' => $default
                 ]
             ));
