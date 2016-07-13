@@ -13,7 +13,7 @@ class PostRepository
      * @param string $default
      * @return Post
      */
-    public function getTitle(int $id, string $default)
+    public function getTitle(int $id, string $default = '')
     {
         return Post::whereId($id)
             ->get()
