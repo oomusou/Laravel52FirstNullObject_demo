@@ -25,7 +25,7 @@ class PostService
      * @param string $default
      * @return string
      */
-    public function showTitle(int $id, string $default)
+    public function showTitle(int $id, string $default = '')
     {
         return $this->postRepository->getTitle($id, $default)->title;
     }
